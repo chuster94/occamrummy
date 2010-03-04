@@ -1,0 +1,26 @@
+Graphics API
+*printboard()
+*curMovingPiece()
+*boolean removetile(x,y)
+*bool placeTile(tile#)
+*bool endturn()
+
+Networking
+*getCurBoard
+*placeTile calls updateNetwork(changedTile)
+*switchTurn()
+*gameOver()
+
+Player
+*tile hand[]
+*int player
+
+Tile
+*int x,y coord
+*int #
+*enum color
+
+turn get/set
+tile board[][]
+tile hand[]
+tile pot[]
