@@ -1,3 +1,4 @@
+package occamrummy;
 
 import java.util.Random;
 
