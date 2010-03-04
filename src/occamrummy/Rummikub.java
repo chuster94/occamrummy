@@ -1,4 +1,4 @@
-
+package occamrummy;
 
 public class Rummikub {
 
