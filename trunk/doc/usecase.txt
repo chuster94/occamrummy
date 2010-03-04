@@ -1,0 +1,21 @@
+I) Player places tile:
+	1) GameUI determines which spot tile was picked and placed 
+		location: (pot->board, board->board, hand->board)
+		source:		AI, human (both use GameUI)
+	2) Rummikub checks if square occupied and alerts GameUI and GameController 
+	3) GameUI repaints either move or returned piece
+	4) GameController broadcasts move to other players
+
+II) Player ends turn
+	1) GameUI gets command to end turn from user action
+	2) Rummikub calls GameBoard to check validity- reverts board if not
+	3) Rummikub calls GameController to broadcast board and endturn
+	4) Rummikub calls GameController to be in observing state (III)
+
+III) Player waiting for turn:
+	1) GameController in listen mode
+	2) GameController receives move update, trigger event
+		2a) Rummikub handle event, call GameBoard and GameUI to update
+	3) GameController receives yourTurn signal
+		3a) Rummikub goes into a while( not (II) ) do { (I) } loop
+

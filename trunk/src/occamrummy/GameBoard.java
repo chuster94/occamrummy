@@ -19,23 +19,13 @@ public class GameBoard {
 		pot = new Tile[POTSIZE];
 		//populate pot
 		int counter = 0;
+		Color[] colorpernumber = {Color.Black, Color.Red, Color.Yellow, Color.Blue, 
+								Color.Black, Color.Red, Color.Yellow, Color.Blue};
 		for (int numbers = 1; numbers < 14; numbers++) {
-				pot[counter] = new Tile(numbers, Color.Black, false);
+			for(Color color: colorpernumber) {
+				pot[counter] = new Tile(numbers, color, false);
 				counter++;
-				pot[counter] = new Tile(numbers, Color.Red, false);
-				counter++;
-				pot[counter] = new Tile(numbers, Color.Blue, false);
-				counter++;
-				pot[counter] = new Tile(numbers, Color.Yellow, false);
-				counter++;
-				pot[counter] = new Tile(numbers, Color.Black, false);
-				counter++;
-				pot[counter] = new Tile(numbers, Color.Red, false);
-				counter++;
-				pot[counter] = new Tile(numbers, Color.Blue, false);
-				counter++;
-				pot[counter] = new Tile(numbers, Color.Yellow, false);
-				counter++;
+			}
 		}
 		pot[counter] = new Tile(0, Color.Black, true);
 		counter++;
