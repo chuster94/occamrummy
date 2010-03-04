@@ -3,6 +3,7 @@ package occamrummy;
 public class Rummikub {
 
 	GameBoard gameBoard;
+	GameController gameController;
 	Player player;
 	int turn;
 	/**
@@ -10,6 +11,7 @@ public class Rummikub {
 	 */
 	public Rummikub() {
 		gameBoard = new GameBoard();
+		gameController = new GameController();
 		player = new Player();
 	}
 	/**
