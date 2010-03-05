@@ -2,7 +2,7 @@ I) Player places tile:
 	1) GameUI determines which spot tile was picked and placed 
 		location: (pot->board, board->board, hand->board)
 		source:		AI, human (both use GameUI)
-	2) Rummikub checks if square occupied and alerts GameUI and GameController 
+	2) Rummikub checks if square occupied and alerts GameUI and GameController
 	3) GameUI repaints either move or returned piece
 	4) GameController broadcasts move to other players
 
@@ -18,4 +18,6 @@ III) Player waiting for turn:
 		2a) Rummikub handle event, call GameBoard and GameUI to update
 	3) GameController receives yourTurn signal
 		3a) Rummikub goes into a while( not (II) ) do { (I) } loop
+		
+		testing
 
